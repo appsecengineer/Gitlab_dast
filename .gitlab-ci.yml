@@ -4,14 +4,14 @@ stages:
   - secrets
   - build
   - container
-  - dast
+  - custom_dast
 
 
 
 owasp_zap:
   image: 
     name: docker:stable
-  stage: dast
+  stage: custom_dast
   variables:
     DOCKER_DRIVER: overlay2
   services:
@@ -42,4 +42,3 @@ owasp_zap:
       paths:
         - ./tests/zap-report.json
       expire_in: 1 week
-

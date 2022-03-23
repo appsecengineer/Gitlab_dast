@@ -1,12 +1,5 @@
 stages:
-  - sast
-  - sca
-  - secrets
-  - build
-  - container
   - custom_dast
-
-
 
 owasp_zap:
   image: 
